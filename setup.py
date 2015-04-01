@@ -13,7 +13,7 @@ with open(path.join(here, 'readme.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'lcdscreen',
-    version = '0.1.3',
+    version = '1.0.0',
 
     description = ('A class to write to a LCD Screen using a raspberry pi'),
     long_description = long_description,

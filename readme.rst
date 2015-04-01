@@ -9,8 +9,13 @@ For a working example of the class, see example.py_.
 
 Installation
 ------------
+Install from pip
 
-Download the `LCDScreen.py` file and place in your project. Add the following line to the top of your main project file:
+::
+
+	pip install lcdscreen
+
+From there you can use it as you wish!
 
 ::
 
