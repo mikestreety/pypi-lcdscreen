@@ -19,7 +19,7 @@ From there you can use it as you wish!
 
 ::
 
-	from LCDScreen import LCDScreen
+	from lcdscreen import LCDScreen
 
 Next, initialise the class, passing in the parameters as required:
 

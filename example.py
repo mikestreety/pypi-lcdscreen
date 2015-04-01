@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from LCDScreen import LCDScreen
+from lcdscreen import LCDScreen
 
 # Initialise the
 lcd = LCDScreen({
