@@ -13,13 +13,13 @@ with open(path.join(here, 'readme.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'lcdscreen',
-    version = '0.1.0',
+    version = '0.1.1',
 
     description = ('A class to write to a LCD Screen using a raspberry pi'),
     long_description = long_description,
     keywords = 'raspberry pi lcd screen',
 
-    url = 'https://github.com/mikestreety/python-screen-display',
+    url = 'https://github.com/mikestreety/pypi-lcdscreen',
 
     author = 'Mike Street',
     author_email = 'mikestreety@gmail.com',
