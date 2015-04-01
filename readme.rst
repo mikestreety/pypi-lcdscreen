@@ -5,7 +5,7 @@ This class makes it easy to write messages to your LCD screen via your Raspberry
 
 For a working example of the class, see example.py_.
 
-.. _example.py: https://github.com/mikestreety/python-screen-display/blob/master/example.py
+.. _example.py: https://github.com/mikestreety/pypi-lcdscreen/blob/master/example.py
 
 Installation
 ------------
