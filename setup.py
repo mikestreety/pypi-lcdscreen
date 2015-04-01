@@ -13,7 +13,7 @@ with open(path.join(here, 'readme.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'lcdscreen',
-    version = '0.1.1',
+    version = '0.1.2',
 
     description = ('A class to write to a LCD Screen using a raspberry pi'),
     long_description = long_description,
@@ -26,7 +26,6 @@ setup(
     license = 'MIT',
 
     packages = find_packages(exclude=['contrib', 'docs', 'tests*']),
-    install_requires = ['time'],
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Development Status :: 4 - Beta',
