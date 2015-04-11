@@ -81,8 +81,7 @@ class LCDScreen:
 		else:
 			raise SyntaxError('String alignment error. Can either be left, right or center')
 
-		if(len(string) > self.config['dimensions'][0]):
-			string = string[0:(self.config['dimensions'][0] - len(self.config['truncate']))] + self.config['truncate']
+		string = self.truncate(string)
 
 		if self.lines_passed > (self.config['dimensions'][1] - 1):
 			self.lines_passed = 0
@@ -160,11 +159,30 @@ class LCDScreen:
 	##
 
 	# Spaces out two strings with a character in between
+	# @left: the string you want on the left
+	# @right: the string you want on the right
+	# @spacer: what you want in between your string
 	# 	e.g. Left-----------Right
 	def spaced(self, left, right, spacer = ' '):
 		spacing = self.config['dimensions'][0] - (len(left) + len(right))
 		spacer = spacer * spacing
 		return left + spacer + right
+
+	# Truncates a string to the set amount
+	# @string: The string you wish to truncate
+	# @length: How long you want the string
+	# @append: Anything you want appended to the truncated string
+	def truncate(self, string, length = False, append = False):
+		if length == False:
+			length = self.config['dimensions'][0]
+
+		if append == False:
+			append = self.config['truncate']
+
+		if(len(string) > length):
+			string = string[0:(length - len(append))] + append
+
+		return string
 
 	##
 	# Internal Functions
