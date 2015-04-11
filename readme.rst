@@ -45,6 +45,7 @@ The defaults are below. If you don't wish to change anything then you can initil
 		'dimensions': [20, 4], # How big your screen is [width, height]
 		'delay': 3, # The default delay time
 		'spacer': ' ' # The default spacer character
+		'truncate': '..' # What to add to a truncated string if the message is longer than the screen width
 	}
 
 Once initialised, it's quite easy to operate. The class is well documented and the exmaple file shows how to use it
