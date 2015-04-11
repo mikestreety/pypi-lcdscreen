@@ -13,7 +13,8 @@ class LCDScreen:
 			'backlight': 18, # The input of the Backlight pin
 			'dimensions': [20, 4], # How big your screen is [width, height]
 			'delay': 3, # The default delay time
-			'spacer': ' ' # The default spacer character
+			'spacer': ' ', # The default spacer character
+			'truncate': '..' # What to add to a truncated string if the message is longer than the screen width
 		}
 
 		# Take user input and merge with above - overwrite if necessary
@@ -79,6 +80,9 @@ class LCDScreen:
 			string = string.center(self.config['dimensions'][0], spacer)
 		else:
 			raise SyntaxError('String alignment error. Can either be left, right or center')
+
+		if(len(string) > self.config['dimensions'][0]):
+			string = string[0:(self.config['dimensions'][0] - len(self.config['truncate']))] + self.config['truncate']
 
 		if self.lines_passed > (self.config['dimensions'][1] - 1):
 			self.lines_passed = 0
